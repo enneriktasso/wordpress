@@ -8,7 +8,8 @@
  * Author URI: http://tassoennerik.ikt.khk.ee/wordpress/
  **/
  
- function dh_modify_read_more_link() {
- return '<a class="more-link" href="' . get_permalink() . '">Click to Read!</a>';
+ add_action( 'wp_footer', 'my_function' );
+
+function my_function() {
+  echo 'hello world';
 }
-add_filter( 'the_content_more_link', 'dh_modify_read_more_link' );
